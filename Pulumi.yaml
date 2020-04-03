@@ -1,0 +1,9 @@
+name: iam-ci-users
+runtime: nodejs
+description: IAM user accounts for automation
+template:
+  config:
+    aws:region:
+      default: "eu-west-1"
+    aws:profile:
+      default: "personal"
