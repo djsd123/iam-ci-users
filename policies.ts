@@ -29,7 +29,8 @@ const s3_static_website_statement: aws.iam.PolicyStatement[] = [{
             "route53:GetChange",
             "route53:GetHostedZone",
             "route53:ListHostedZones",
-            "route53:ListHostedZonesByName"
+            "route53:ListHostedZonesByName",
+            "route53:ListTagsForResource"
         ],
         Effect: 'Allow',
         Resource: '*'
