@@ -15,6 +15,7 @@ const s3_static_website_statement: aws.iam.PolicyStatement[] = [{
         "cloudfront:GetDistributionConfig",
         "cloudfront:GetStreamingDistributionConfig",
         "cloudfront:ListDistributions",
+        "cloudfront:ListTagsForResource",
         "cloudfront:TagResource",
         "cloudfront:UpdateDistribution"
     ],
@@ -29,7 +30,8 @@ const s3_static_website_statement: aws.iam.PolicyStatement[] = [{
             "route53:GetChange",
             "route53:GetHostedZone",
             "route53:ListHostedZones",
-            "route53:ListHostedZonesByName"
+            "route53:ListHostedZonesByName",
+            "route53:ListTagsForResource"
         ],
         Effect: 'Allow',
         Resource: '*'
