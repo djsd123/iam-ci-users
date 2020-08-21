@@ -15,6 +15,7 @@ const s3_static_website_statement: aws.iam.PolicyStatement[] = [{
         "cloudfront:GetDistributionConfig",
         "cloudfront:GetStreamingDistributionConfig",
         "cloudfront:ListDistributions",
+        "cloudfront:ListTagsForResource",
         "cloudfront:TagResource",
         "cloudfront:UpdateDistribution"
     ],
