@@ -19,6 +19,7 @@ const s3_static_website_statement: aws.iam.PolicyStatement[] = [{
         "cloudfront:ListDistributions",
         "cloudfront:ListTagsForResource",
         "cloudfront:TagResource",
+        "cloudfront:UpdateCloudFrontOriginAccessIdentity",
         "cloudfront:UpdateDistribution"
     ],
     Effect: 'Allow',
