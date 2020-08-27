@@ -8,10 +8,11 @@ export const policies: aws.iam.PolicyDocument[] = []
 const s3_static_website_statement: aws.iam.PolicyStatement[] = [{
     Sid: 'Stmt1585742777480',
     Action: [
+        "cloudfront:CreateCloudFrontOriginAccessIdentity",
         "cloudfront:CreateDistribution",
         "cloudfront:CreateDistributionWithTags",
-        "cloudfront:CreateCloudFrontOriginAccessIdentity",
         "cloudfront:DeleteDistribution",
+        "cloudfront:GetCloudFrontOriginAccessIdentity",
         "cloudfront:GetDistribution",
         "cloudfront:GetDistributionConfig",
         "cloudfront:GetStreamingDistributionConfig",
