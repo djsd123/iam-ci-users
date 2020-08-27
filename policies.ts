@@ -47,6 +47,7 @@ const s3_static_website_statement: aws.iam.PolicyStatement[] = [{
             "s3:DeleteBucketWebsite",
             "s3:DeleteObject",
             "s3:GetBucketAcl",
+            "s3:GetBucketCors",
             "s3:GetBucketLogging",
             "s3:GetBucketWebsite",
             "s3:GetObject",
