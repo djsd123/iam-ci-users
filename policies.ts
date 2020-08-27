@@ -10,6 +10,7 @@ const s3_static_website_statement: aws.iam.PolicyStatement[] = [{
     Action: [
         "cloudfront:CreateDistribution",
         "cloudfront:CreateDistributionWithTags",
+        "cloudfront:CreateCloudFrontOriginAccessIdentity",
         "cloudfront:DeleteDistribution",
         "cloudfront:GetDistribution",
         "cloudfront:GetDistributionConfig",
