@@ -17,6 +17,7 @@ const s3_static_website_statement: aws.iam.PolicyStatement[] = [{
         "cloudfront:GetDistributionConfig",
         "cloudfront:GetStreamingDistributionConfig",
         "cloudfront:ListDistributions",
+        "cloudfront:ListDistributionsByWebACLId",
         "cloudfront:ListTagsForResource",
         "cloudfront:TagResource",
         "cloudfront:UpdateCloudFrontOriginAccessIdentity",
@@ -24,7 +25,7 @@ const s3_static_website_statement: aws.iam.PolicyStatement[] = [{
     ],
     Effect: 'Allow',
     Resource: '*'
-},
+    },
     {
         Sid: 'Stmt1585744164414',
         Action: [
@@ -62,6 +63,36 @@ const s3_static_website_statement: aws.iam.PolicyStatement[] = [{
             "s3:PutBucketWebsite",
             "s3:PutObject",
             "s3:PutObjectAcl"
+        ],
+        Effect: 'Allow',
+        Resource: '*'
+    },
+    {
+        Sid: 'ManageWAFv2',
+        Action: [
+            "wafv2:AssociateWebACL",
+            "wafv2:CreateRuleGroup",
+            "wafv2:CreateWebACL",
+            "wafv2:DeleteLoggingConfiguration",
+            "wafv2:DeleteRuleGroup",
+            "wafv2:DeleteWebACL",
+            "wafv2:DescribeManagedRuleGroup",
+            "wafv2:DisassociateWebACL",
+            "wafv2:GetLoggingConfiguration",
+            "wafv2:GetRuleGroup",
+            "wafv2:GetWebACL",
+            "wafv2:GetWebACLForResource",
+            "wafv2:ListAvailableManagedRuleGroups",
+            "wafv2:ListLoggingConfigurations",
+            "wafv2:ListResourcesForWebACL",
+            "wafv2:ListRuleGroups",
+            "wafv2:ListTagsForResource",
+            "wafv2:ListWebACLs",
+            "wafv2:PutLoggingConfiguration",
+            "wafv2:TagResource",
+            "wafv2:UntagResource",
+            "wafv2:UpdateRuleGroup",
+            "wafv2:UpdateWebACL"
         ],
         Effect: 'Allow',
         Resource: '*'
