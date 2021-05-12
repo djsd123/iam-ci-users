@@ -4,7 +4,7 @@
     "@pulumi/pulumi": "^2.0.0-beta.1",
     "@types/js-yaml": "^3.12.3",
     "fs": "^0.0.1-security",
-    "grpc": "^1.24.3",
+    "grpc": "^1.24.9",
     "js-yaml": "^3.13.1"
   }
 }
